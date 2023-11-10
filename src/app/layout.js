@@ -1,9 +1,4 @@
-import './global.css'
-
-import { getServerSession } from 'next-auth/next'
-
-import { authOptions } from '@/app/api/auth/[...nextauth]/route'
-import Provider from '@/app/context/client'
+import './globals.css'
 
 export const metadata = {
   title: 'Festify APP',
@@ -15,12 +10,9 @@ export const metadata = {
 }
 
 export default async function RootLayout({ children }) {
-  const session = await getServerSession(authOptions)
   return (
     <html lang="en">
-      <body className={` min-w-screen bg-primary min-h-screen`}>
-        <Provider session={session}>{children}</Provider>
-      </body>
+      <body className={` min-w-screen bg-primary min-h-screen`}>{children}</body>
     </html>
   )
 }
