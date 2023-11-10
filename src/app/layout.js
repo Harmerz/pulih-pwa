@@ -1,8 +1,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Festify APP',
-  description: 'Festify APP PKM Kewirausahaan',
+  title: 'Pulih',
+  description: 'Pulih PKM Kewirausahaan',
   manifest: '/manifest.json',
   viewport: 'width=device-width, initial-scale=1',
   icons: ['/favicon.ico'],
