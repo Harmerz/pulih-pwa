@@ -1,7 +1,6 @@
-import '@/app/globals.css'
+import './global.css'
 
 import { getServerSession } from 'next-auth/next'
-import React from 'react'
 
 import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 import Provider from '@/app/context/client'
@@ -19,7 +18,7 @@ export default async function RootLayout({ children }) {
   const session = await getServerSession(authOptions)
   return (
     <html lang="en">
-      <body className={` min-w-screen min-h-screen bg-primary`}>
+      <body className={` min-w-screen bg-primary min-h-screen`}>
         <Provider session={session}>{children}</Provider>
       </body>
     </html>
