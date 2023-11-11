@@ -36,6 +36,7 @@ export default function Screen() {
       router.push('/signin')
       router.refresh()
     } catch (err) {
+      // eslint-disable-next-line no-console
       console.log(err)
     }
     if (isError) error(data)

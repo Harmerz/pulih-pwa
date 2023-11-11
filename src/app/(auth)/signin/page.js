@@ -11,7 +11,6 @@ export default function Screen() {
   const router = useRouter()
   const [form, setForm] = useState({})
   const onFinish = async () => {
-    console.log(form)
     try {
       const res = await signIn('credentials', {
         redirect: false,

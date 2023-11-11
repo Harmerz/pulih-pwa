@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { Providers } from '@/components'
 
 export const metadata = {
-  title: 'Festify APP',
-  description: 'Festify APP PKM Kewirausahaan',
+  title: 'Pulih APP',
+  description: 'Pulih APP PKM Kewirausahaan',
   manifest: '/manifest.json',
   viewport: 'width=device-width, initial-scale=1',
   icons: ['/favicon.ico'],
