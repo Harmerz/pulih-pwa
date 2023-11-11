@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { Providers } from '@/components'
 
 export const metadata = {
-  title: 'Pulih - It&apos;s For You',
+  title: "Pulih - It's For You",
   description: 'Pulih App',
 }
 
