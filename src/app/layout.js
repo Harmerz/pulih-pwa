@@ -5,8 +5,12 @@ import PropTypes from 'prop-types'
 import { Providers } from '@/components'
 
 export const metadata = {
-  title: "Pulih - It's For You",
-  description: 'Pulih App',
+  title: 'Festify APP',
+  description: 'Festify APP PKM Kewirausahaan',
+  manifest: '/manifest.json',
+  viewport: 'width=device-width, initial-scale=1',
+  icons: ['/favicon.ico'],
+  themeColor: '#ffffff',
 }
 
 export default function RootLayout({ children }) {

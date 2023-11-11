@@ -1,15 +1,14 @@
-import { clientsClaim, skipWaiting } from 'workbox-core'
+import { skipWaiting, clientsClaim } from 'workbox-core'
 import { ExpirationPlugin } from 'workbox-expiration'
-import { cleanupOutdatedCaches, matchPrecache, precacheAndRoute } from 'workbox-precaching'
-import { registerRoute, setCatchHandler, setDefaultHandler } from 'workbox-routing'
-import { CacheFirst, NetworkFirst, NetworkOnly, StaleWhileRevalidate } from 'workbox-strategies'
+import { NetworkOnly, NetworkFirst, CacheFirst, StaleWhileRevalidate } from 'workbox-strategies'
+import { registerRoute, setDefaultHandler, setCatchHandler } from 'workbox-routing'
+import { matchPrecache, precacheAndRoute, cleanupOutdatedCaches } from 'workbox-precaching'
 
 skipWaiting()
 clientsClaim()
 
 // must include following lines when using inject manifest module from workbox
 // https://developers.google.com/web/tools/workbox/guides/precache-files/workbox-build#add_an_injection_point
-// eslint-disable-next-line no-restricted-globals
 const WB_MANIFEST = self.__WB_MANIFEST
 // Precache fallback route and image
 WB_MANIFEST.push({
@@ -198,16 +197,18 @@ setCatchHandler(({ event }) => {
     case 'document':
       // If using precached URLs:
       return matchPrecache('/fallback')
-    // return caches.match('/fallback')
+      // return caches.match('/fallback')
+      break
     case 'image':
       // If using precached URLs:
       return matchPrecache('/static/images/fallback.png')
+      // return caches.match('/static/images/fallback.png')
+      break
     case 'font':
     // If using precached URLs:
     // return matchPrecache(FALLBACK_FONT_URL);
     // return caches.match('/static/fonts/fallback.otf')
     // break
-    // eslint-disable-next-line no-fallthrough
     default:
       // If we don't have a fallback, just return an error response.
       return Response.error()

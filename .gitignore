@@ -4,7 +4,6 @@
 /node_modules
 /.pnp
 .pnp.js
-.yarn/install-state.gz
 
 # testing
 /coverage
@@ -43,7 +42,6 @@ next-env.d.ts
 **/public/sw.js.map
 **/public/workbox-*.js.map
 **/public/worker-*.js.map
-
 
 yarn.lock
 .env

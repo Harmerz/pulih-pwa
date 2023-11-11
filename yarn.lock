@@ -2422,9 +2422,9 @@ ejs@^3.1.6:
     jake "^10.8.5"
 
 electron-to-chromium@^1.4.535:
-  version "1.4.580"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.580.tgz#2f8f70f70733a6be1fb6f31de1224e6dc4bb196d"
-  integrity sha512-T5q3pjQon853xxxHUq3ZP68ZpvJHuSMY2+BZaW3QzjS4HvNuvsMmZ/+lU+nCrftre1jFZ+OSlExynXWBihnXzw==
+  version "1.4.581"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.581.tgz#23b684c67bf56d4284e95598c05a5d266653b6d8"
+  integrity sha512-6uhqWBIapTJUxgPTCHH9sqdbxIMPt7oXl0VcAL1kOtlU6aECdcMncCrX5Z7sHQ/invtrC9jUQUef7+HhO8vVFw==
 
 emoji-regex@^9.2.2:
   version "9.2.2"
@@ -3901,9 +3901,9 @@ neo-async@^2.6.2:
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
 next-auth@^4.24.3:
-  version "4.24.4"
-  resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-4.24.4.tgz#ec8aa72963c4c8d325ebc21f4c15e3b46647026e"
-  integrity sha512-5DGffi+OpkbU62vPQIJ1z+hFnmow+ec5Qrn9m6eoglIO51m0DlrmLxBduZEwKAYDEg9k2joi1yelgmq1vqK3aQ==
+  version "4.24.5"
+  resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-4.24.5.tgz#1fd1bfc0603c61fd2ba6fd81b976af690edbf07e"
+  integrity sha512-3RafV3XbfIKk6rF6GlLE4/KxjTcuMCifqrmD+98ejFq73SRoj2rmzoca8u764977lH/Q7jo6Xu6yM+Re1Mz/Og==
   dependencies:
     "@babel/runtime" "^7.20.13"
     "@panva/hkdf" "^1.0.2"
@@ -4316,9 +4316,9 @@ preact-render-to-string@^5.1.19:
     pretty-format "^3.8.0"
 
 preact@^10.6.3:
-  version "10.18.2"
-  resolved "https://registry.yarnpkg.com/preact/-/preact-10.18.2.tgz#e3aeccc292aebbc2e0b76ed76570aa61dd5f75e4"
-  integrity sha512-X/K43vocUHDg0XhWVmTTMbec4LT/iBMh+csCEqJk+pJqegaXsvjdqN80ZZ3L+93azWCnWCZ+WGwYb8SplxeNjA==
+  version "10.19.0"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.19.0.tgz#a6b65f8b4d18b07aa54d9b09f3da3f8a28d37ec4"
+  integrity sha512-klJSys/ljj/Z97DrYogoUE2R2qQCtHQD9kJAEDzn/sTDx7dXAfGEbGKvLLVLs2Mhy3t5RDRGrDcWPNAky6KsUw==
 
 prelude-ls@^1.2.1:
   version "1.2.1"
