@@ -8,7 +8,7 @@ export function BottomBar() {
   const pathname = usePathname()
 
   return (
-    <div className="fixed bottom-0 flex w-full flex-row justify-center gap-8 bg-white px-6 py-3 text-sm font-medium text-cream-dark-300">
+    <div className="fixed bottom-0 flex w-full flex-row justify-center gap-8 border-t bg-white px-6 py-3 text-sm font-medium text-cream-dark-300 shadow-2xl">
       <Link
         href="/home"
         className={`flex w-1/4 flex-col items-center gap-1 ${
