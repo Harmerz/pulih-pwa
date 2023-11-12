@@ -1,0 +1,4 @@
+#Sun Nov 12 11:56:12 ICT 2023
+base.0=D\:\\Github\\pulih-pwa\\app\\build\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

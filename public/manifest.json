@@ -2,8 +2,8 @@
   "name": "Pulih",
   "short_name": "Pulih",
   "description": "Pulih PKM K",
-  "theme_color": "white",
-  "background_color": "white",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "display": "standalone",
   "orientation": "portrait",
   "id": "/",
@@ -139,5 +139,10 @@
       "src": "ios/1024.png",
       "sizes": "1024x1024"
     }
+  ],
+  "categories": [
+    "education",
+    "health",
+    "lifestyle"
   ]
 }
