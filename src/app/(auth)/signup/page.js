@@ -50,6 +50,23 @@ export default function Screen() {
         <form className="mt-14 flex w-4/5 max-w-[252px] flex-col gap-6">
           <div className="relative">
             <div className="absolute -top-2 left-4  bg-white px-1 text-xs text-green-600">
+              Full Name
+            </div>
+            <input
+              onChange={(e) =>
+                setForm({
+                  ...form,
+                  name: e.target.value,
+                })
+              }
+              required
+              type="text"
+              placeholder="Username"
+              className="w-full rounded-lg border border-b border-neutral-500 px-4 py-2 text-black"
+            />
+          </div>
+          <div className="relative">
+            <div className="absolute -top-2 left-4  bg-white px-1 text-xs text-green-600">
               Username
             </div>
             <input

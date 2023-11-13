@@ -23,7 +23,7 @@
     "ecmaVersion": 6
   },
   "rules": {
-    "prettier/prettier": ["warn"],
+    "prettier/prettier": 0,
     "react-hooks/exhaustive-deps": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],

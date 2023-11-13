@@ -36,16 +36,21 @@ export const options = {
             },
           })
           const { data } = res
+          console.log(user.data)
 
           return {
             id: user.data.id,
             email: user.data.email,
+            username: user.data.username,
             name: user.data.name ?? '',
             role: user.data.roles[0],
             accessToken: data.accessToken,
             refreshToken: data.refreshToken,
             accessTokenExpires: Date.now() + ACCESS_TOKEN_EXP_AUTH_OPTION_IN_MS,
-            verify: data.isVerified,
+            tanggallahir: user?.data?.tanggallahir ?? '',
+            sex: user?.data?.sex ?? '',
+            telephone: user?.data?.telephone ?? '',
+            asal: user?.data?.asal ?? '',
           }
         } catch (err) {
           // console.log(err)
