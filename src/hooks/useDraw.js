@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from 'react'
 export const useDraw = (onDraw) => {
   const [mouseDown, setMouseDown] = useState(false)
 
-  const canvasRef = useRef()
-  const prevPoint = useRef()
+  const canvasRef = useRef(null)
+  const prevPoint = useRef(null)
 
   const onMouseDown = () => setMouseDown(true)
 
@@ -13,6 +13,7 @@ export const useDraw = (onDraw) => {
     if (!canvas) return
 
     const ctx = canvas.getContext('2d')
+
     if (!ctx) return
 
     ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -33,7 +34,7 @@ export const useDraw = (onDraw) => {
     const handler = (e) => {
       if (!mouseDown) return
       const currentPoint = computePointInCanvas(e)
-
+      console.log(e)
       const ctx = canvasRef.current?.getContext('2d')
       if (!ctx || !currentPoint) return
 
@@ -43,20 +44,21 @@ export const useDraw = (onDraw) => {
 
     const mouseUpHandler = () => {
       setMouseDown(false)
+      console.log('UP')
       prevPoint.current = null
     }
 
     // Add event listeners
-    canvasRef.current?.addEventListener('mousemove', handler)
-    window.addEventListener('mouseup', mouseUpHandler)
+    canvasRef.current?.addEventListener('touchmove', handler)
+    window.addEventListener('touchend', mouseUpHandler)
 
     // Remove event listeners
     return () => {
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      canvasRef?.current?.removeEventListener('mousemove', handler)
-      window.removeEventListener('mouseup', mouseUpHandler)
+      canvasRef?.current?.removeEventListener('touchmove', handler)
+      window.removeEventListener('touchend', mouseUpHandler)
     }
-  }, [mouseDown, onDraw])
+  }, [onDraw])
 
   return { canvasRef, onMouseDown, clear }
 }

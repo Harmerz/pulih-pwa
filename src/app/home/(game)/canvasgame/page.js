@@ -1,11 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ChromePicker } from 'react-color'
 
 import { useDraw } from '@/hooks/useDraw'
 
-export default function GamePage() {
+export function CanvasGame() {
   const [color, setColor] = useState('#000')
 
   function drawLine({ prevPoint, currentPoint, ctx }) {
@@ -27,20 +27,29 @@ export default function GamePage() {
     ctx.fill()
   }
   const { canvasRef, onMouseDown, clear } = useDraw(drawLine)
+  useEffect(() => {
+    const ctx = canvasRef.current?.getContext('2d')
+    ctx.canvas.width = window.innerWidth
+    ctx.canvas.height = window.innerHeight
+  }, [canvasRef])
 
   return (
-    <div className="flex h-screen w-full flex-col items-center justify-center bg-white">
+    <div className="flex h-screen w-screen items-center justify-center bg-white">
       <div className="flex flex-col gap-10 pr-10">
         <ChromePicker color={color} onChange={(e) => setColor(e.hex)} />
         <button type="button" className="rounded-md border border-black p-2" onClick={clear}>
           Clear canvas
         </button>
       </div>
-      <canvas
-        ref={canvasRef}
-        onMouseDown={onMouseDown}
-        className="h-screen w-full rounded-md border border-black"
-      />
+      <div className="relative w-full">
+        <canvas
+          ref={canvasRef}
+          onMouseDown={onMouseDown}
+          className="rounded-md border border-black"
+        />
+      </div>
     </div>
   )
 }
+
+export default CanvasGame
