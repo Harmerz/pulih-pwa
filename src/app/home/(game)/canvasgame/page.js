@@ -29,7 +29,7 @@ export default function GamePage() {
   const { canvasRef, onMouseDown, clear } = useDraw(drawLine)
 
   return (
-    <div className="w-w-full flex h-screen flex-col items-center justify-center bg-white">
+    <div className="flex h-screen w-full flex-col items-center justify-center bg-white">
       <div className="flex flex-col gap-10 pr-10">
         <ChromePicker color={color} onChange={(e) => setColor(e.hex)} />
         <button type="button" className="rounded-md border border-black p-2" onClick={clear}>
@@ -39,9 +39,7 @@ export default function GamePage() {
       <canvas
         ref={canvasRef}
         onMouseDown={onMouseDown}
-        width={750}
-        height={750}
-        className="rounded-md border border-black"
+        className="h-screen w-full rounded-md border border-black"
       />
     </div>
   )

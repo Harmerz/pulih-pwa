@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { BottomBar, CardBook } from '@/components/element'
 
@@ -15,7 +16,9 @@ export default function HomePage() {
         </div>
       </div>
       <div className="-mt-40 h-full min-h-screen w-full bg-cream-200 px-5 pt-40">
-        <CardBook />
+        <Link href="/home/canvasgame">
+          <CardBook />
+        </Link>{' '}
       </div>
       <BottomBar />
     </div>

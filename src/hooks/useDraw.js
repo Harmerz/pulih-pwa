@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from 'react'
 export const useDraw = (onDraw) => {
   const [mouseDown, setMouseDown] = useState(false)
 
-  const canvasRef = useRef(null)
-  const prevPoint = useRef(null)
+  const canvasRef = useRef()
+  const prevPoint = useRef()
 
   const onMouseDown = () => setMouseDown(true)
 
@@ -27,6 +27,7 @@ export const useDraw = (onDraw) => {
       const x = e.clientX - rect.left
       const y = e.clientY - rect.top
 
+      // eslint-disable-next-line consistent-return
       return { x, y }
     }
     const handler = (e) => {
@@ -51,6 +52,7 @@ export const useDraw = (onDraw) => {
 
     // Remove event listeners
     return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       canvasRef?.current?.removeEventListener('mousemove', handler)
       window.removeEventListener('mouseup', mouseUpHandler)
     }
