@@ -49,6 +49,20 @@ export default function HomePage() {
     emot = 'text-emoticon-100'
     textEmot = 'Rad'
   }
+  const dataBook = [
+    {
+      link: '/sukai',
+      judul: 'Lingkari yang kamu sukai',
+      isi: 'Disini kamu diminta untuk melingkari apa saja yang kamu sukai selama ini.',
+      bagian: 'Distraksi',
+    },
+    {
+      link: '/benda-sekitar',
+      judul: 'Benda Sekitar Kamu',
+      isi: 'Ketika kamu merasa sendiri, ketahuilah selalu ada benda-benda di sekitarmu yang menemanimu. Mereka ada dalam beragam rupa dan warna. Sekarang, sentuhlah benda-benda tersebut, lalu kelompokkan benda-benda ini menurut jenisnya di bawah ini!',
+      bagian: 'Nyaman',
+    },
+  ]
   return (
     <div className="h-screen w-full overflow-y-auto">
       <div className="relative z-10 w-full">
@@ -78,9 +92,9 @@ export default function HomePage() {
         </div>
       </div>
       <div className="-mt-40 flex h-full min-h-screen w-full flex-col gap-3 bg-cream-200 px-5 pt-40">
-        <Link href="/home/canvasgame">
-          <CardBook />
-        </Link>
+        {dataBook.map((item) => (
+          <CardBook data={item} key={item} />
+        ))}
       </div>
       <BottomBar />
     </div>

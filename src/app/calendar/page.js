@@ -69,7 +69,7 @@ export default function MoodCalendar() {
             <button type="button" onClick={() => setMonth(month - 1)}>
               <IoChevronBackCircle className="h-8 w-8 text-green-600" />
             </button>
-            <button type="button" onClick={() => setMonth(month - 1)}>
+            <button type="button" onClick={() => setMonth(month + 1)}>
               <IoChevronForwardCircle className="h-8 w-8 text-green-600" />
             </button>
           </div>

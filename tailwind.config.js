@@ -69,6 +69,10 @@ module.exports = {
           100: '#019547',
         },
       },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        moreSugar: ['More-Sugar', 'Poppins'],
+      },
     },
   },
   plugins: [],
