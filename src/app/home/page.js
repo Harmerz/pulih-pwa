@@ -62,6 +62,18 @@ export default function HomePage() {
       isi: 'Ketika kamu merasa sendiri, ketahuilah selalu ada benda-benda di sekitarmu yang menemanimu. Mereka ada dalam beragam rupa dan warna. Sekarang, sentuhlah benda-benda tersebut, lalu kelompokkan benda-benda ini menurut jenisnya di bawah ini!',
       bagian: 'Nyaman',
     },
+    {
+      link: '/syukur',
+      judul: 'Tulis apa yang kamu syukuri',
+      isi: 'Apa yang kamu syukuri dari hidupmu?',
+      bagian: 'Ekspresi',
+    },
+    {
+      link: '/origami',
+      judul: 'Tulis harapan pada origami',
+      isi: 'Tulis harapanmu pada kertas origami dan lipatlah hingga menjadi bentuk seperti ini',
+      bagian: 'Aktif',
+    },
   ]
   return (
     <div className="h-screen w-full overflow-y-auto">
