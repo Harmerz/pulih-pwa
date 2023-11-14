@@ -5,7 +5,7 @@ import { ChromePicker } from 'react-color'
 
 import { useDraw } from '@/hooks/useDraw'
 
-export function CanvasGame() {
+export default function CanvasGame() {
   const [color, setColor] = useState('#000')
 
   function drawLine({ prevPoint, currentPoint, ctx }) {
@@ -51,5 +51,3 @@ export function CanvasGame() {
     </div>
   )
 }
-
-export default CanvasGame
