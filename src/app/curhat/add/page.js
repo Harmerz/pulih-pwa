@@ -14,7 +14,7 @@ export default function TulisCurhat() {
   const [mood, setMood] = useState(0)
 
   const [form, setForm] = useState()
-  const { mutate: Update, data, isError, isSuccess } = useChatMutation()
+  const { mutate: Update, data, isError, isSuccess, isLoading } = useChatMutation()
   const router = useRouter()
   const onFinish = async () => {
     try {
@@ -34,7 +34,7 @@ export default function TulisCurhat() {
     }
     if (isError) console.log(data)
   }
-
+  console.log(isSuccess, isLoading, isError)
   const Clear = () => {
     setForm()
     setMood(0)
@@ -188,7 +188,7 @@ export default function TulisCurhat() {
           <Button type="secondary" onClick={() => Clear}>
             Bersihkan
           </Button>
-          <Button type="primary" onClick={onFinish}>
+          <Button type="primary" loading={isLoading} onClick={onFinish}>
             Simpan
           </Button>
         </div>

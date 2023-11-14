@@ -9,9 +9,8 @@ import { useGetCurhat } from '@/hooks/curhat'
 
 export default function Curhat() {
   const { data } = useGetCurhat()
-  console.log(data)
   return (
-    <div className="relative h-full w-full">
+    <div className="relative h-full min-h-screen w-full">
       <div className="fixed w-full bg-white px-5 py-4">
         <p className="text-sm text-cream-dark-600">Anda butuh... ?</p>
         <p className="text-2xl font-semibold text-green-700">Ceritakan hari kamu...</p>
@@ -24,7 +23,7 @@ export default function Curhat() {
           <IoSearch className="absolute right-2 top-1/2 h-5 w-5 -translate-y-1/2 text-green-500" />
         </div>
       </div>
-      <div className="h-screen bg-cream-200 px-5 py-[166px]">
+      <div className="flex h-full min-h-screen flex-col gap-3 bg-cream-200 px-5 py-[166px]">
         {data?.[0]?.curhat?.map((item) => (
           <BoxCurhat key={item} curhat={item} />
         ))}
