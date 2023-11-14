@@ -16,13 +16,13 @@ export default function BendaSekitar() {
           <div />
         </div>
         <div className="font-moreSugar px-5 py-6">
-          <p className="text-end text-xl text-black">
+          <p className="text-center text-xl text-black">
             Tulis harapanmu pada kertas origami dan lipatlah hingga menjadi bentuk seperti ini
           </p>
-          <div className="relative mx-auto my-[20%] my-auto aspect-square w-3/5">
+          <div className="relative mx-auto my-[20%] aspect-square w-3/5">
             <Image src="/assets/images/game/origami.svg" alt="origami" fill />
           </div>
-          <p className="mt-auto text-end text-xl text-black">
+          <p className="mt-auto text-center text-xl text-black">
             Konon, origami burung (orizuru) melambangkan harapan seseorang.
           </p>
         </div>

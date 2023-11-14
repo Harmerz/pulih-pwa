@@ -76,7 +76,7 @@ export default function HomePage() {
     },
   ]
   return (
-    <div className="h-screen w-full overflow-y-auto">
+    <div className="h-full min-h-screen w-full overflow-y-auto">
       <div className="relative z-10 w-full">
         <div className="flex w-full flex-row justify-between bg-white px-4 py-5">
           <div className="z-10 flex flex-col bg-white pb-4">
